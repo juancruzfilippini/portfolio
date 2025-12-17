@@ -5,8 +5,9 @@ Portfolio personal construido con Next.js (App Router), TypeScript y Tailwind li
 ## Estructura
 
 - `src/app` - Rutas de la App Router (`/`, `/projects`, `/projects/[slug]`, `/about`, `/contact`).
-- `src/components` - Componentes reutilizables (Navbar, Footer, ProjectCard, Tag, Section, ButtonLink).
-- `src/data/projects.ts` - Fuente de datos estática para proyectos destacados.
+- `src/components` - Componentes reutilizables (Navbar, Footer, ProjectCard, Tag, Section, ButtonLink, proveedor de idioma).
+- `src/data/projects.ts` - Fuente de datos estática bilingüe para proyectos destacados.
+- `src/data/translations.ts` - Copia de textos para español/inglés.
 - `public/images/placeholder.svg` - Placeholder para capturas hasta contar con imágenes reales.
 
 ## Ejecutar en local
@@ -33,14 +34,16 @@ npm run lint
 ## Agregar o editar proyectos
 
 1. Abrir `src/data/projects.ts`.
-2. Cada entrada respeta la interfaz `Project` con campos:
-   - `slug`, `title`, `summary`, `problem`, `solution`
-   - `stack` (array de tecnologías)
-   - `tags` (categorías rápidas)
-   - `highlights` (bullets técnicos)
-   - `links` (`repo`, `demo` si existen)
-   - `images` (usar `public/images/placeholder.svg` hasta tener capturas reales)
-3. Si agregás links o capturas, el detalle `/projects/[slug]` los mostrará automáticamente.
+2. Cada entrada tiene estructura bilingüe:
+   - `slug` y `links` comunes.
+   - `translations.es` y `translations.en` con `title`, `summary`, `problem`, `solution`, `stack`, `tags`, `highlights`, `images`.
+3. Las capturas pueden usar `public/images/placeholder.svg` hasta contar con imágenes reales (marcar `isPlaceholder: true`).
+4. Si agregás links o capturas, el detalle `/projects/[slug]` los mostrará automáticamente en ambos idiomas.
+
+## Cambio de idioma
+
+- El switch ES/EN se encuentra en la barra de navegación y persiste la preferencia en `localStorage`.
+- Los textos globales se editan en `src/data/translations.ts`.
 
 ## Fuente de los proyectos
 

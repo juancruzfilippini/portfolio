@@ -1,13 +1,18 @@
+"use client";
+
 import Link from "next/link";
-import type { Project } from "@/data/projects";
+import type { LocalizedProject } from "@/data/projects";
 import ButtonLink from "./ButtonLink";
 import Tag from "./Tag";
+import { useLanguage } from "@/components/LanguageProvider";
 
 interface ProjectCardProps {
-  project: Project;
+  project: LocalizedProject;
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const { t } = useLanguage();
+
   return (
     <article className="glass-panel flex flex-col gap-4">
       <div className="flex items-start justify-between gap-3">
@@ -26,10 +31,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
       <div className="flex flex-wrap gap-3">
         <ButtonLink href={`/projects/${project.slug}`} variant="secondary">
-          Ver detalle
+          {t.common.viewDetail}
         </ButtonLink>
         <ButtonLink href={project.links.repo || "#"} variant="ghost" disabled={!project.links.repo}>
-          Repositorio
+          {t.common.repo}
         </ButtonLink>
       </div>
     </article>

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import ProjectCard from "@/components/ProjectCard";
-import Section from "@/components/Section";
-import { projects } from "@/data/projects";
+import ProjectsContent from "./ProjectsContent";
 
 export const metadata: Metadata = {
   title: "Proyectos | Juan Cruz",
@@ -15,16 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
-  return (
-    <Section
-      title="Proyectos"
-      subtitle="Casos seleccionados con foco en reglas de negocio, validaciones y soporte operativo."
-    >
-      <div className="grid gap-6 md:grid-cols-2">
-        {projects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
-        ))}
-      </div>
-    </Section>
-  );
+  return <ProjectsContent />;
 }

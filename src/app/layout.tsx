@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { LanguageProvider } from "@/components/LanguageProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteTitle = "Juan Cruz | Staff Software Engineer";
-const siteDescription = "Construyo sistemas web y APIs enfocadas en negocio, con experiencia en Laravel, Node.js y operaciones Linux.";
+const siteTitle = "Juan Cruz | Tecnico Universitario en Programación";
+const siteDescription =
+  "Construyo sistemas web y APIs enfocadas en negocio, con experiencia en Laravel, Node.js y operaciones Linux.";
 
 export const metadata: Metadata = {
   title: siteTitle,
@@ -44,11 +46,13 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 py-8 sm:px-8">
-          <Navbar />
-          <main className="flex-1 pt-8 sm:pt-12">{children}</main>
-          <Footer />
-        </div>
+        <LanguageProvider>
+          <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 py-6 sm:py-8 sm:px-8">
+            <Navbar />
+            <main className="flex-1 pt-6 sm:pt-10">{children}</main>
+            <Footer />
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   );
