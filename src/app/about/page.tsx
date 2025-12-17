@@ -24,12 +24,12 @@ export default function AboutPage() {
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="glass-panel space-y-3 lg:col-span-2">
           <h3 className="text-lg font-semibold text-white">Resumen</h3>
-          <p className="text-muted">
+          <p className="text-slate-400">
             Soy un desarrollador con experiencia real construyendo sistemas en Laravel y Node.js/Express, siempre pegado al negocio:
             cobranzas recurrentes, agendas operativas y catálogos vivos. He desplegado en servidores Linux por SSH, ajustado pools de
             conexión y diagnosticado incidentes de MySQL.
           </p>
-          <p className="text-muted">
+          <p className="text-slate-400">
             Disfruto aterrizar requerimientos en modelos claros, con validaciones y feedback inmediato para quienes operan las
             herramientas. También acompaño la operación: reviso logs, puertos y procesos, y dejo recomendaciones para que el software
             siga funcionando después de la entrega.
@@ -43,7 +43,7 @@ export default function AboutPage() {
               <Tag key={item}>{item}</Tag>
             ))}
           </div>
-          <ul className="list-disc space-y-2 pl-5 text-sm text-muted">
+          <ul className="list-disc space-y-2 pl-5 text-sm text-slate-400">
             <li>Modelado de dominios con relaciones complejas (M:N, estados, tarifas).</li>
             <li>Validaciones en backend con Zod y control de errores desde la API.</li>
             <li>Interacciones sin recargar: modales, autocompletado y feedback inmediato.</li>

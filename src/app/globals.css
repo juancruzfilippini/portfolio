@@ -41,15 +41,11 @@
     @apply rounded-2xl border border-slate-800/60 bg-white/5 p-6 shadow-xl shadow-cyan-500/5 backdrop-blur;
   }
 
-  .text-muted {
-    color: var(--muted);
-  }
-
   .section-title {
     @apply text-2xl font-semibold tracking-tight text-white sm:text-3xl;
   }
 
   .section-subtitle {
-    @apply mt-2 max-w-3xl text-base text-muted sm:text-lg;
+    @apply mt-2 max-w-3xl text-base text-slate-400 sm:text-lg;
   }
 }

@@ -61,7 +61,7 @@ export default function ContactPage() {
               className="w-full rounded-lg border border-slate-800/60 bg-slate-900/50 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
             />
           </div>
-          <p className="text-xs text-muted">
+          <p className="text-xs text-slate-400">
             Este formulario usa mailto y no guarda datos en servidor. Si preferís, escribime directo.
           </p>
           <button
@@ -74,11 +74,11 @@ export default function ContactPage() {
 
         <div className="glass-panel space-y-3">
           <h3 className="text-lg font-semibold text-white">También podés contactarme</h3>
-          <p className="text-muted">Correo directo: juan.cruz@example.com</p>
+          <p className="text-slate-400">Correo directo: juan.cruz@example.com</p>
           <ButtonLink href="mailto:juan.cruz@example.com" variant="secondary">
             Abrir cliente de correo
           </ButtonLink>
-          <p className="text-muted text-sm">
+          <p className="text-slate-400 text-sm">
             Incluí contexto del proyecto, tecnologías usadas y urgencia. Si es un incidente de base de datos, agrega logs y métrica
             de conexiones para acelerar el diagnóstico.
           </p>

@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex items-start justify-between gap-3">
         <div>
           <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-          <p className="mt-2 text-sm text-muted">{project.summary}</p>
+          <p className="mt-2 text-sm text-slate-400">{project.summary}</p>
         </div>
         <Link href={`/projects/${project.slug}`} className="text-cyan-200 hover:text-white" aria-label={project.title}>
           →

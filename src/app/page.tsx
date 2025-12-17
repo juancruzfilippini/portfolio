@@ -18,7 +18,7 @@ export default function HomePage() {
               <span>Laravel · Node.js · MySQL</span>
             </div>
             <h1 className="text-3xl leading-tight sm:text-4xl">Juan Cruz</h1>
-            <p className="max-w-2xl text-lg text-muted sm:text-xl">
+            <p className="max-w-2xl text-lg text-slate-400 sm:text-xl">
               Construyo sistemas web y APIs con foco en reglas de negocio, datos consistentes y operación en producción.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -33,7 +33,7 @@ export default function HomePage() {
               </ButtonLink>
             </div>
           </div>
-          <div className="grid gap-4 rounded-xl border border-slate-800/60 bg-slate-900/60 p-4 text-sm text-muted">
+          <div className="grid gap-4 rounded-xl border border-slate-800/60 bg-slate-900/60 p-4 text-sm text-slate-400">
             <div className="flex items-center justify-between rounded-lg border border-slate-800/60 bg-white/5 px-4 py-3">
               <span className="text-white">Cobranzas recurrentes</span>
               <Tag>Payments</Tag>
@@ -70,15 +70,15 @@ export default function HomePage() {
         <div className="grid gap-4 md:grid-cols-3">
           <div className="glass-panel space-y-2">
             <h3 className="text-lg text-white">Reglas de negocio primero</h3>
-            <p className="text-sm text-muted">Estados claros, validaciones y modelos relacionales que reflejan el negocio (pagos mensuales, agendas, catálogos).</p>
+            <p className="text-sm text-slate-400">Estados claros, validaciones y modelos relacionales que reflejan el negocio (pagos mensuales, agendas, catálogos).</p>
           </div>
           <div className="glass-panel space-y-2">
             <h3 className="text-lg text-white">UX sin fricción</h3>
-            <p className="text-sm text-muted">Altas y ediciones sin recargar, feedback inmediato y flujos diseñados junto a usuarios operativos.</p>
+            <p className="text-sm text-slate-400">Altas y ediciones sin recargar, feedback inmediato y flujos diseñados junto a usuarios operativos.</p>
           </div>
           <div className="glass-panel space-y-2">
             <h3 className="text-lg text-white">Operación y soporte</h3>
-            <p className="text-sm text-muted">Monitoreo, tuning de pools y resolución de incidentes MySQL/servidor para mantener la plataforma estable.</p>
+            <p className="text-sm text-slate-400">Monitoreo, tuning de pools y resolución de incidentes MySQL/servidor para mantener la plataforma estable.</p>
           </div>
         </div>
       </Section>

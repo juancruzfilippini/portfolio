@@ -18,7 +18,7 @@ export default function Navbar() {
       <Link href="/" className="text-lg font-semibold tracking-tight text-white">
         Juan Cruz
       </Link>
-      <nav className="flex items-center gap-2 text-sm font-medium text-muted sm:gap-3">
+      <nav className="flex items-center gap-2 text-sm font-medium text-slate-400 sm:gap-3">
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           return (

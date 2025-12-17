@@ -50,14 +50,14 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
   return (
     <article className="space-y-10">
       <header className="glass-panel space-y-4">
-        <div className="flex flex-wrap items-center gap-3 text-sm text-muted">
+        <div className="flex flex-wrap items-center gap-3 text-sm text-slate-400">
           {project.tags.map((tag) => (
             <Tag key={tag}>{tag}</Tag>
           ))}
         </div>
         <div className="space-y-3">
           <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">{project.title}</h1>
-          <p className="max-w-3xl text-lg text-muted">{project.summary}</p>
+          <p className="max-w-3xl text-lg text-slate-400">{project.summary}</p>
         </div>
         <div className="flex flex-wrap gap-3">
           <ButtonLink href={project.links.repo || "#"} variant="secondary" disabled={!project.links.repo}>
@@ -73,15 +73,15 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
         <div className="space-y-8 lg:col-span-2">
           <section className="glass-panel space-y-3">
             <h2 className="text-xl font-semibold text-white">Problema</h2>
-            <p className="text-muted">{project.problem}</p>
+            <p className="text-slate-400">{project.problem}</p>
           </section>
           <section className="glass-panel space-y-3">
             <h2 className="text-xl font-semibold text-white">Solución</h2>
-            <p className="text-muted">{project.solution}</p>
+            <p className="text-slate-400">{project.solution}</p>
           </section>
           <section className="glass-panel space-y-4">
             <h2 className="text-xl font-semibold text-white">Highlights técnicos</h2>
-            <ul className="grid gap-3 text-muted">
+            <ul className="grid gap-3 text-slate-400">
               {project.highlights.map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 rounded-full bg-cyan-400" aria-hidden />
@@ -103,7 +103,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           </section>
           <section className="glass-panel space-y-3">
             <h3 className="text-lg font-semibold text-white">Enlaces</h3>
-            <div className="flex flex-col gap-2 text-sm text-muted">
+            <div className="flex flex-col gap-2 text-sm text-slate-400">
               <div className="flex items-center justify-between rounded-lg border border-slate-800/60 px-3 py-2">
                 <span>Repositorio</span>
                 {project.links.repo ? (
@@ -111,7 +111,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                     Abrir
                   </ButtonLink>
                 ) : (
-                  <span className="text-muted">No disponible</span>
+                  <span className="text-slate-400">No disponible</span>
                 )}
               </div>
               <div className="flex items-center justify-between rounded-lg border border-slate-800/60 px-3 py-2">
@@ -121,7 +121,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                     Abrir
                   </ButtonLink>
                 ) : (
-                  <span className="text-muted">No disponible</span>
+                  <span className="text-slate-400">No disponible</span>
                 )}
               </div>
             </div>
@@ -140,7 +140,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                       className="h-auto w-full object-cover"
                     />
                   </div>
-                  <figcaption className="text-xs text-muted">
+                  <figcaption className="text-xs text-slate-400">
                     {image.caption}
                     {image.isPlaceholder ? " · TODO: reemplazar con captura real" : null}
                   </figcaption>
