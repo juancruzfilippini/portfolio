@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b1021;
+  --foreground: #e5e7eb;
+  --muted: #94a3b8;
+  --card: #0f172a;
+  --accent: #22d3ee;
+  --border: #1f2937;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    background: radial-gradient(circle at 25% 20%, rgba(34, 211, 238, 0.08), transparent 25%),
+      radial-gradient(circle at 80% 0%, rgba(59, 130, 246, 0.08), transparent 20%),
+      var(--background);
+    color: var(--foreground);
+    font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 700;
+    color: #f8fafc;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply rounded-2xl border border-slate-800/60 bg-white/5 p-6 shadow-xl shadow-cyan-500/5 backdrop-blur;
+  }
+
+  .text-muted {
+    color: var(--muted);
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold tracking-tight text-white sm:text-3xl;
+  }
+
+  .section-subtitle {
+    @apply mt-2 max-w-3xl text-base text-muted sm:text-lg;
+  }
+}

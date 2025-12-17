@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio de Juan Cruz
 
-## Getting Started
+Portfolio personal construido con Next.js (App Router), TypeScript y Tailwind listo para desplegar en Vercel. Incluye páginas de inicio, proyectos, detalle por caso, sobre mí y contacto, tomando como base la experiencia real en Laravel, Node.js/Express, MySQL y operación en Linux.
 
-First, run the development server:
+## Estructura
+
+- `src/app` - Rutas de la App Router (`/`, `/projects`, `/projects/[slug]`, `/about`, `/contact`).
+- `src/components` - Componentes reutilizables (Navbar, Footer, ProjectCard, Tag, Section, ButtonLink).
+- `src/data/projects.ts` - Fuente de datos estática para proyectos destacados.
+- `public/images/placeholder.svg` - Placeholder para capturas hasta contar con imágenes reales.
+
+## Ejecutar en local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# abrir http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Lint
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Despliegue en Vercel
 
-## Learn More
+1. Crear un proyecto en [Vercel](https://vercel.com/) y conectar este repositorio.
+2. No requiere variables de entorno ni base de datos: el contenido es estático.
+3. Usar el comando por defecto de Vercel (`npm run build`).
+4. Confirmar que la carpeta de salida es `.next` (config por defecto de Next.js).
 
-To learn more about Next.js, take a look at the following resources:
+## Agregar o editar proyectos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Abrir `src/data/projects.ts`.
+2. Cada entrada respeta la interfaz `Project` con campos:
+   - `slug`, `title`, `summary`, `problem`, `solution`
+   - `stack` (array de tecnologías)
+   - `tags` (categorías rápidas)
+   - `highlights` (bullets técnicos)
+   - `links` (`repo`, `demo` si existen)
+   - `images` (usar `public/images/placeholder.svg` hasta tener capturas reales)
+3. Si agregás links o capturas, el detalle `/projects/[slug]` los mostrará automáticamente.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Fuente de los proyectos
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+El repositorio no incluye otros paquetes ni monorepo. Los proyectos cargados en `src/data/projects.ts` reflejan la experiencia descrita en el contexto del perfil (cobranzas mensuales en Laravel, gestión de turnos con Node/Express + Zod, ABM marcas-modelos en Laravel con AJAX, y soporte operativo MySQL/Linux).
