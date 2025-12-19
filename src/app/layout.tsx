@@ -44,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="es" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
         <LanguageProvider>
           <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 py-6 sm:py-8 sm:px-8">
             <Navbar />

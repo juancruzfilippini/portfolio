@@ -1,21 +1,33 @@
 "use client";
 
+import { useMemo, useState } from "react";
 import Section from "@/components/Section";
 import ButtonLink from "@/components/ButtonLink";
 import { useLanguage } from "@/components/LanguageProvider";
 
+const CONTACT_EMAIL = "juancruzfilippini@gmail.com";
+
 export default function ContactContent() {
   const { t } = useLanguage();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const mailtoHref = useMemo(() => {
+    const subject = encodeURIComponent(t.contact.title);
+    const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\n${message}`);
+    return `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  }, [email, message, name, t.contact.title]);
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    window.location.href = mailtoHref;
+  };
 
   return (
     <Section title={t.contact.title} subtitle={t.contact.subtitle}>
       <div className="grid gap-6 lg:grid-cols-2">
-        <form
-          className="glass-panel space-y-4"
-          action="mailto:juancruzfilippini@gmail.com"
-          method="POST"
-          encType="text/plain"
-        >
+        <form className="glass-panel space-y-4" onSubmit={handleSubmit}>
           <div className="space-y-2">
             <label htmlFor="name" className="text-sm font-semibold text-white">
               {t.contact.form.name}
@@ -24,6 +36,8 @@ export default function ContactContent() {
               id="name"
               name="name"
               required
+              value={name}
+              onChange={(event) => setName(event.target.value)}
               className="w-full rounded-lg border border-slate-800/60 bg-slate-900/50 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
             />
           </div>
@@ -36,6 +50,8 @@ export default function ContactContent() {
               name="email"
               type="email"
               required
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
               className="w-full rounded-lg border border-slate-800/60 bg-slate-900/50 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
             />
           </div>
@@ -48,6 +64,8 @@ export default function ContactContent() {
               name="message"
               rows={5}
               required
+              value={message}
+              onChange={(event) => setMessage(event.target.value)}
               className="w-full rounded-lg border border-slate-800/60 bg-slate-900/50 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
             />
           </div>
@@ -63,7 +81,7 @@ export default function ContactContent() {
         <div className="glass-panel space-y-3">
           <h3 className="text-lg font-semibold text-white">{t.contact.directHeading}</h3>
           <p className="text-slate-400">{t.contact.emailLabel}</p>
-          <ButtonLink href="mailto:juancruzfilippini@gmail.com" variant="secondary">
+          <ButtonLink href={`mailto:${CONTACT_EMAIL}`} variant="secondary">
             {t.contact.mailtoCta}
           </ButtonLink>
           <p className="text-slate-400 text-sm">{t.contact.helper}</p>
