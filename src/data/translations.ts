@@ -152,7 +152,7 @@ export const translations: Record<Language, Translations> = {
       title: "Sobre mí",
       subtitle: "Perfil técnico enfocado en resolver problemas reales con software mantenible.",
       overviewTitle: "Resumen",
-      experienceTitle: "Experiencia práctica",
+      experienceTitle: "",
       skillsTitle: "Stack y fortalezas",
       overview: [
         "Tecnico Universitario en Programación con experiencia en backend y operación de sistemas web.",
@@ -161,10 +161,6 @@ export const translations: Record<Language, Translations> = {
         "Actualmente me encuentro trabajando como Analista Programador en NECTA. Manejando grandes bases de datos y utilizando tecnologias como Java, PHP, JavaScript, React, Laravel y NodeJS.",
       ],
       experience: [
-        "Cobranzas recurrentes: estados mensuales automáticos, tarifas por vehículo y relación dueños/vehículos.",
-        "Gestión de horarios: persistencia inmediata en tablas shifts, schedule y schedule_staff con validación de solapes.",
-        "Catálogo de marcas y modelos: autocompletado y altas inline vía AJAX sin recargar la página.",
-        "Operación: tuning de HikariCP, desbloqueo de hosts max_connect_errors y análisis de logs en servidores Linux.",
       ],
       skills: [
         "Laravel (MVC, Eloquent, Blade)",
@@ -271,7 +267,7 @@ export const translations: Record<Language, Translations> = {
       title: "About",
       subtitle: "Technical profile focused on solving real problems with maintainable software.",
       overviewTitle: "Overview",
-      experienceTitle: "Practical experience",
+      experienceTitle: "",
       skillsTitle: "Stack & strengths",
       overview: [
         "Tecnico Universitario en Programación with experience in backend and operating web systems.",
@@ -280,10 +276,6 @@ export const translations: Record<Language, Translations> = {
         "I am currently working as a Programmer Analyst at NECTA. I manage large databases and use technologies such as Java, PHP, JavaScript, React, Laravel, and NodeJS.",
       ],
       experience: [
-        "Recurring billing: automatic monthly states, per-vehicle rates, and owner/vehicle relationships.",
-        "Scheduling: immediate persistence across shifts, schedule, and schedule_staff tables with overlap validation.",
-        "Brand/model catalog: autocomplete with inline creation via AJAX without full-page reloads.",
-        "Operations: HikariCP tuning, unlocking max_connect_errors hosts, and log analysis on Linux servers.",
       ],
       skills: [
         "Laravel (MVC, Eloquent, Blade)",
@@ -311,7 +303,7 @@ export const translations: Record<Language, Translations> = {
         "Include project context, technologies, and urgency. For database incidents, add logs and connection metrics to speed up diagnostics.",
     },
     footer: {
-      rights: "Portfolio ready to deploy on Vercel.",
+      rights: "",
       projects: "Projects",
       about: "About",
       contact: "Contact",
