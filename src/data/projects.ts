@@ -36,53 +36,51 @@ export type LocalizedProject = LocalizedProjectContent & {
 
 export const projects: ProjectEntry[] = [
   {
-    slug: "parking-cobranzas",
-    links: { repo: "", demo: "" },
+    slug: "sistema-estacionamiento",
+    links: { repo: "https://github.com/juancruzfilippini/sistema_estacionamiento", demo: "" },
     translations: {
       es: {
-        title: "Sistema de estacionamiento con cobranzas mensuales",
-        summary: "Automatización de cuotas y estados de pago para abonados de estacionamiento.",
+        title: "Sistema de estacionamiento",
+        summary: "Aplicación para gestionar vehículos, abonos y operación diaria de un estacionamiento.",
         problem:
-          "El estacionamiento necesitaba controlar abonos mensuales y cortar la morosidad sin depender de tareas manuales.",
+          "Un estacionamiento necesitaba centralizar el registro de vehículos y sus abonos en un único sistema.",
         solution:
-          "Se modelaron estados automáticos (pending, debtor, paid), tarifas por vehículo y la relación muchos-a-muchos entre dueños y vehículos para facturar y regularizar pagos.",
-        stack: ["Laravel", "Eloquent", "Blade", "MySQL"],
-        tags: ["Payments", "CRUD", "Relaciones M:N", "Laravel"],
+          "Se consolidó la gestión de vehículos, propietarios y estados de pago en una plataforma de uso diario.",
+        stack: ["Stack no especificado"],
+        tags: ["Payments", "CRUD", "Parking"],
         highlights: [
-          "Estados que rotan cada mes (pending → debtor → paid) según fechas de corte y pagos registrados.",
-          "Tarifas configurables por vehículo, con cálculo de adeudos y control de vigencias.",
-          "Dueños con múltiples vehículos y vehículos compartidos entre dueños, manteniendo histórico.",
-          "Panel CRUD con modales Blade y validaciones server-side para evitar inconsistencias.",
+          "Registro centralizado de vehículos y clientes.",
+          "Seguimiento del estado de abonos y pagos.",
+          "Operación diaria con panel de control y listados.",
         ],
         images: [
           {
             src: "/images/placeholder.svg",
-            alt: "Pantallas del sistema de estacionamiento",
-            caption: "TODO: Reemplazar con captura real del panel de cobranzas",
+            alt: "Sistema de estacionamiento",
+            caption: "Captura pendiente del sistema",
             isPlaceholder: true,
           },
         ],
       },
       en: {
-        title: "Monthly parking billing system",
-        summary: "Automates monthly dues and payment states for parking subscribers.",
+        title: "Parking management system",
+        summary: "Application to manage vehicles, subscriptions, and daily parking operations.",
         problem:
-          "The parking lot needed to control monthly subscriptions and curb delinquency without manual follow-ups.",
+          "A parking business needed a single system to manage vehicles and their recurring payments.",
         solution:
-          "Modeled automatic states (pending, debtor, paid), per-vehicle rates, and the many-to-many owner/vehicle relationship to invoice and regularize payments.",
-        stack: ["Laravel", "Eloquent", "Blade", "MySQL"],
-        tags: ["Payments", "CRUD", "Many-to-many", "Laravel"],
+          "Centralized vehicle, owner, and payment status management into a daily operations platform.",
+        stack: ["Stack not specified"],
+        tags: ["Payments", "CRUD", "Parking"],
         highlights: [
-          "Monthly state rotation (pending → debtor → paid) based on cutoff dates and recorded payments.",
-          "Configurable rates per vehicle with debt calculation and validity control.",
-          "Owners with multiple vehicles and shared vehicles across owners while keeping history.",
-          "CRUD panel with Blade modals and server-side validations to prevent inconsistencies.",
+          "Centralized vehicle and customer registry.",
+          "Payment and subscription status tracking.",
+          "Daily operations dashboard and listings.",
         ],
         images: [
           {
             src: "/images/placeholder.svg",
-            alt: "Parking billing console",
-            caption: "TODO: Replace with an actual billing console screenshot",
+            alt: "Parking management system",
+            caption: "Screenshot pending",
             isPlaceholder: true,
           },
         ],
@@ -90,51 +88,51 @@ export const projects: ProjectEntry[] = [
     },
   },
   {
-    slug: "gestion-turnos",
-    links: { repo: "", demo: "" },
+    slug: "rrhh-reloj-biometrico",
+    links: { repo: "https://github.com/Luciano-Badilla/rrhh-relojbiometricoHU", demo: "" },
     translations: {
       es: {
-        title: "Gestión de horarios y turnos operativos",
-        summary: "Asignación inmediata de turnos con persistencia en tablas shifts, schedule y schedule_staff.",
-        problem: "Los equipos necesitaban cargar y confirmar turnos sin demoras ni doble asignación.",
+        title: "RRHH - Reloj biométrico",
+        summary: "Registro y control de asistencia del personal mediante reloj biométrico.",
+        problem:
+          "RRHH necesitaba consolidar fichajes biométricos para controlar asistencia y novedades.",
         solution:
-          "Se diseñó un flujo de guardado inmediato en tablas de agenda, con validaciones de solapamientos y actualización instantánea para el personal.",
-        stack: ["Node.js", "Express", "Zod", "MySQL"],
-        tags: ["Scheduling", "CRUD", "Validation"],
+          "Se integró la información de fichadas biométricas con reportes y vistas de control.",
+        stack: ["Stack no especificado"],
+        tags: ["RRHH", "Attendance", "Reporting"],
         highlights: [
-          "Persistencia inmediata en tablas shifts, schedule y schedule_staff al guardar un cambio.",
-          "Validación de payloads con Zod para evitar solapes y datos incompletos.",
-          "API REST con control de concurrencia ligera para mantener la agenda consistente.",
-          "Vistas con feedback inmediato para staff y supervisores.",
+          "Consolidación de asistencias y fichajes.",
+          "Paneles para revisión de novedades.",
+          "Reportes para administración de RRHH.",
         ],
         images: [
           {
             src: "/images/placeholder.svg",
-            alt: "Dashboard de turnos",
-            caption: "TODO: Agregar captura de la agenda y asignaciones",
+            alt: "RRHH reloj biométrico",
+            caption: "Captura pendiente del módulo RRHH",
             isPlaceholder: true,
           },
         ],
       },
       en: {
-        title: "Scheduling and shift management",
-        summary: "Immediate shift assignments persisted across shifts, schedule, and schedule_staff tables.",
-        problem: "Teams needed to load and confirm shifts without delays or double booking.",
+        title: "HR biometric clock",
+        summary: "Attendance tracking and control using biometric time clocks.",
+        problem:
+          "HR teams needed to consolidate biometric punches to track attendance and incidents.",
         solution:
-          "Designed an immediate save flow across agenda tables with overlap validation and instant updates for staff.",
-        stack: ["Node.js", "Express", "Zod", "MySQL"],
-        tags: ["Scheduling", "CRUD", "Validation"],
+          "Integrated biometric punch data with reporting and oversight dashboards.",
+        stack: ["Stack not specified"],
+        tags: ["HR", "Attendance", "Reporting"],
         highlights: [
-          "Instant persistence to shifts, schedule, and schedule_staff tables on every save.",
-          "Payload validation with Zod to avoid overlaps and incomplete records.",
-          "REST API with lightweight concurrency control to keep the schedule consistent.",
-          "UI with immediate feedback for staff and supervisors.",
+          "Attendance and punch consolidation.",
+          "Dashboards to review incidents.",
+          "Reports for HR administration.",
         ],
         images: [
           {
             src: "/images/placeholder.svg",
-            alt: "Shift scheduling dashboard",
-            caption: "TODO: Add a capture of the schedule and assignments",
+            alt: "HR biometric clock",
+            caption: "Screenshot pending",
             isPlaceholder: true,
           },
         ],
@@ -142,53 +140,51 @@ export const projects: ProjectEntry[] = [
     },
   },
   {
-    slug: "marcas-modelos",
-    links: { repo: "", demo: "" },
+    slug: "aulas",
+    links: { repo: "https://github.com/juancruzfilippini/aulas", demo: "" },
     translations: {
       es: {
-        title: "Gestión de marcas y modelos con autocompletado",
-        summary: "ABM de marcas y modelos con creación en vivo y búsqueda incremental.",
+        title: "Gestión de aulas",
+        summary: "Organización de aulas y reservas para instituciones educativas.",
         problem:
-          "El catálogo de vehículos crecía y requería alta rápida sin recargar la página, con búsquedas fluidas.",
+          "Las instituciones necesitaban ordenar la disponibilidad de aulas y sus asignaciones.",
         solution:
-          "Se implementaron listados jerárquicos y un input con autocompletado que permite dar de alta nuevas marcas y modelos vía AJAX.",
-        stack: ["Laravel", "Blade", "AJAX", "MySQL"],
-        tags: ["CRUD", "UX", "Autocomplete"],
+          "Se estructuró un módulo para registrar aulas, responsables y reservas asociadas.",
+        stack: ["Stack no especificado"],
+        tags: ["Scheduling", "Education", "CRUD"],
         highlights: [
-          "Listado maestro-detalle: marcas y sus modelos en una misma vista.",
-          "Autocompletado de marcas con alta inline y persistencia sin recargar.",
-          "Modales para crear y editar modelos, con validaciones y mensajes inmediatos.",
-          "Endpoints ligeros para búsqueda incremental y uso desde JavaScript.",
+          "Registro de aulas y disponibilidad.",
+          "Asignaciones con responsables y horarios.",
+          "Vista general para coordinar ocupación.",
         ],
         images: [
           {
             src: "/images/placeholder.svg",
-            alt: "Gestión de marcas y modelos",
-            caption: "TODO: Incluir captura del flujo de autocompletado",
+            alt: "Gestión de aulas",
+            caption: "Captura pendiente del módulo de aulas",
             isPlaceholder: true,
           },
         ],
       },
       en: {
-        title: "Brand and model management with autocomplete",
-        summary: "CRUD for brands and models with live creation and incremental search.",
+        title: "Classroom management",
+        summary: "Organizes classrooms and reservations for educational institutions.",
         problem:
-          "The vehicle catalog kept growing and needed fast creation without page reloads plus smooth searching.",
+          "Institutions needed to manage classroom availability and assignments.",
         solution:
-          "Implemented hierarchical listings and an autocomplete input that allows creating new brands and models via AJAX.",
-        stack: ["Laravel", "Blade", "AJAX", "MySQL"],
-        tags: ["CRUD", "UX", "Autocomplete"],
+          "Built a module to register classrooms, owners, and related reservations.",
+        stack: ["Stack not specified"],
+        tags: ["Scheduling", "Education", "CRUD"],
         highlights: [
-          "Master-detail view: brands and their models in a single screen.",
-          "Brand autocomplete with inline creation and persistence without reloads.",
-          "Modals to create and edit models with validations and immediate feedback.",
-          "Lightweight endpoints for incremental search consumed from JavaScript.",
+          "Classroom registry and availability.",
+          "Assignments with owners and schedules.",
+          "Overview to coordinate occupancy.",
         ],
         images: [
           {
             src: "/images/placeholder.svg",
-            alt: "Brand and model management UI",
-            caption: "TODO: Add a capture of the autocomplete flow",
+            alt: "Classroom management",
+            caption: "Screenshot pending",
             isPlaceholder: true,
           },
         ],
@@ -196,54 +192,103 @@ export const projects: ProjectEntry[] = [
     },
   },
   {
-    slug: "operacion-mysql",
-    links: { repo: "", demo: "" },
+    slug: "presupuestos",
+    links: { repo: "https://github.com/juancruzfilippini/presupuestos", demo: "" },
     translations: {
       es: {
-        title: "Operación y diagnóstico de aplicaciones en MySQL/Linux",
-        summary: "Soporte productivo para apps Java/Spring, Laravel y Node, con tuning de pools y mitigación de incidentes MySQL.",
+        title: "Presupuestos y cotizaciones",
+        summary: "Gestión de presupuestos para clientes con seguimiento del estado.",
         problem:
-          "Incidentes recurrentes por conexiones bloqueadas, timeouts y saturación de recursos en servidores Linux.",
+          "Era necesario centralizar la creación y el control de presupuestos para clientes.",
         solution:
-          "Monitoreo de procesos/puertos, ajustes de HikariCP y desbloqueo de hosts afectados por max_connect_errors, además de análisis de logs para aislar fallas.",
-        stack: ["Linux", "MySQL", "HikariCP", "Java", "Laravel", "Node.js"],
-        tags: ["DevOps", "Reliability", "Incident Response"],
+          "Se organizó un flujo de presupuestos con datos de clientes, ítems y estados.",
+        stack: ["Stack no especificado"],
+        tags: ["Sales", "Quotations", "CRUD"],
         highlights: [
-          "Diagnóstico de pools HikariCP y ajuste de conexiones máximas según capacidad del servidor.",
-          "Desbloqueo de hosts afectados por max_connect_errors y endurecimiento de parámetros de red.",
-          "Revisión de logs de aplicación y sistema para encontrar procesos colgados o puertos en uso.",
-          "Plan de acción para incidentes repetitivos y seguimiento post-mortem ligero.",
+          "Registro de clientes y presupuestos asociados.",
+          "Detalle de ítems y montos por propuesta.",
+          "Seguimiento del estado de cada presupuesto.",
         ],
         images: [
           {
             src: "/images/placeholder.svg",
-            alt: "Operación y monitoreo",
-            caption: "TODO: Añadir gráfica o captura de monitoreo de conexiones",
+            alt: "Presupuestos",
+            caption: "Captura pendiente del flujo de presupuestos",
             isPlaceholder: true,
           },
         ],
       },
       en: {
-        title: "Operations and MySQL/Linux troubleshooting",
-        summary:
-          "Production support for Java/Spring, Laravel, and Node apps with pool tuning and MySQL incident mitigation.",
+        title: "Budgets and quotations",
+        summary: "Quotation management for clients with status tracking.",
         problem:
-          "Recurring incidents due to blocked connections, timeouts, and resource saturation on Linux servers.",
+          "A centralized way to create and track client quotations was needed.",
         solution:
-          "Monitoring processes/ports, tuning HikariCP, and unlocking hosts affected by max_connect_errors, plus log analysis to isolate failures.",
-        stack: ["Linux", "MySQL", "HikariCP", "Java", "Laravel", "Node.js"],
-        tags: ["DevOps", "Reliability", "Incident Response"],
+          "Structured a quotation flow with customer data, items, and statuses.",
+        stack: ["Stack not specified"],
+        tags: ["Sales", "Quotations", "CRUD"],
         highlights: [
-          "Diagnosed HikariCP pools and adjusted max connections according to server capacity.",
-          "Unlocked hosts affected by max_connect_errors and hardened network parameters.",
-          "Reviewed app and system logs to find stuck processes or ports in use.",
-          "Action plan for recurring incidents with lightweight postmortem follow-up.",
+          "Customer registry linked to quotations.",
+          "Itemized proposals with totals.",
+          "Status tracking for each quotation.",
         ],
         images: [
           {
             src: "/images/placeholder.svg",
-            alt: "Operations and monitoring",
-            caption: "TODO: Add a chart or screenshot showing connection monitoring",
+            alt: "Budgets and quotations",
+            caption: "Screenshot pending",
+            isPlaceholder: true,
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "ticketera-hu",
+    links: { repo: "https://github.com/Luciano-Badilla/ticketeraHU", demo: "" },
+    translations: {
+      es: {
+        title: "Ticketera HU",
+        summary: "Sistema de tickets para soporte interno y seguimiento de incidencias.",
+        problem:
+          "Se requería ordenar solicitudes internas y dar seguimiento a incidencias.",
+        solution:
+          "Se implementó una ticketera con estados y seguimiento de cada solicitud.",
+        stack: ["Stack no especificado"],
+        tags: ["Support", "Tickets", "Workflow"],
+        highlights: [
+          "Registro y seguimiento de incidencias.",
+          "Estados para ordenar el flujo de soporte.",
+          "Panel para priorizar y resolver solicitudes.",
+        ],
+        images: [
+          {
+            src: "/images/placeholder.svg",
+            alt: "Ticketera HU",
+            caption: "Captura pendiente del tablero de tickets",
+            isPlaceholder: true,
+          },
+        ],
+      },
+      en: {
+        title: "Ticketing system HU",
+        summary: "Ticketing system for internal support and incident tracking.",
+        problem:
+          "Internal requests needed to be organized and tracked.",
+        solution:
+          "Implemented a ticketing workflow with status tracking for each request.",
+        stack: ["Stack not specified"],
+        tags: ["Support", "Tickets", "Workflow"],
+        highlights: [
+          "Incident registration and tracking.",
+          "Status-driven support workflow.",
+          "Dashboard to prioritize and resolve requests.",
+        ],
+        images: [
+          {
+            src: "/images/placeholder.svg",
+            alt: "Ticketing system HU",
+            caption: "Screenshot pending",
             isPlaceholder: true,
           },
         ],
