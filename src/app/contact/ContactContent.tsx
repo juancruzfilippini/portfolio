@@ -12,7 +12,7 @@ export default function ContactContent() {
       <div className="grid gap-6 lg:grid-cols-2">
         <form
           className="glass-panel space-y-4"
-          action="mailto:juan.cruz@example.com"
+          action="mailto:juancruzfilippini@gmail.com"
           method="POST"
           encType="text/plain"
         >
@@ -63,7 +63,7 @@ export default function ContactContent() {
         <div className="glass-panel space-y-3">
           <h3 className="text-lg font-semibold text-white">{t.contact.directHeading}</h3>
           <p className="text-slate-400">{t.contact.emailLabel}</p>
-          <ButtonLink href="mailto:juan.cruz@example.com" variant="secondary">
+          <ButtonLink href="mailto:juancruzfilippini@gmail.com" variant="secondary">
             {t.contact.mailtoCta}
           </ButtonLink>
           <p className="text-slate-400 text-sm">{t.contact.helper}</p>
