@@ -18,6 +18,8 @@
     background: radial-gradient(circle at 25% 20%, rgba(34, 211, 238, 0.08), transparent 25%),
       radial-gradient(circle at 80% 0%, rgba(59, 130, 246, 0.08), transparent 20%),
       var(--background);
+    background-size: 140% 140%;
+    animation: backgroundDrift 28s ease-in-out infinite;
     color: var(--foreground);
     font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
     min-height: 100vh;
@@ -37,13 +39,21 @@
     opacity: 0.7;
     pointer-events: none;
     z-index: -1;
-    animation: floatGlow 18s ease-in-out infinite;
+    animation: floatGlow 18s ease-in-out infinite, pulseGlow 12s ease-in-out infinite;
   }
 
   body::after {
     inset: auto -10% -25% -10%;
     height: 55%;
     animation-delay: -9s;
+  }
+
+  body::selection {
+    background: rgba(34, 211, 238, 0.4);
+  }
+
+  body::before {
+    background-size: 120% 120%;
   }
 
   h1,
@@ -66,6 +76,26 @@
   }
   50% {
     transform: translate3d(0, 30px, 0) scale(1.05);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes backgroundDrift {
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 40% 60%;
   }
 }
 
