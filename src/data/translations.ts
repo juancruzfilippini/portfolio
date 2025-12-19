@@ -158,6 +158,7 @@ export const translations: Record<Language, Translations> = {
         "Tecnico Universitario en Programación con experiencia en backend y operación de sistemas web.",
         "He construido y mantenido aplicaciones en Laravel, Node.js/Express y MySQL, incluyendo despliegues en Linux por SSH.",
         "Me enfoco en reglas de negocio claras, validaciones consistentes y diagnósticos de producción cuando algo falla.",
+        "Actualmente me encuentro trabajando como Analista Programador en NECTA. Manejando grandes bases de datos y utilizando tecnologias como Java, PHP, JavaScript, React, Laravel y NodeJS.",
       ],
       experience: [
         "Cobranzas recurrentes: estados mensuales automáticos, tarifas por vehículo y relación dueños/vehículos.",
@@ -187,7 +188,7 @@ export const translations: Record<Language, Translations> = {
         "Incluí contexto del proyecto, tecnologías usadas y urgencia. Si es un incidente de base de datos, agrega logs y métrica de conexiones para acelerar el diagnóstico.",
     },
     footer: {
-      rights: "Portfolio desplegable en Vercel.",
+      rights: "",
       projects: "Proyectos",
       about: "Sobre mí",
       contact: "Contacto",
@@ -272,6 +273,7 @@ export const translations: Record<Language, Translations> = {
         "Tecnico Universitario en Programación with experience in backend and operating web systems.",
         "I have built and maintained Laravel, Node.js/Express, and MySQL applications, including SSH deployments to Linux.",
         "I focus on clear business rules, consistent validations, and production diagnostics when things break.",
+        "I am currently working as a Programmer Analyst at NECTA. I manage large databases and use technologies such as Java, PHP, JavaScript, React, Laravel, and NodeJS.",
       ],
       experience: [
         "Recurring billing: automatic monthly states, per-vehicle rates, and owner/vehicle relationships.",

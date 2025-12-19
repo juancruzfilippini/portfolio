@@ -22,7 +22,7 @@ export function generateMetadata({ params }: ProjectPageProps): Metadata {
   }
 
   const content = project.translations.es;
-  const title = `${content.title} | Juan Cruz`;
+  const title = `${content.title} | Juan Cruz Filippini`;
   const description = content.summary;
 
   return {

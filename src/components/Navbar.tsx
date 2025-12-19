@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <header className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-800/60 bg-white/5 px-4 py-3 shadow-lg shadow-cyan-500/10 backdrop-blur sm:flex-nowrap sm:px-6">
       <Link href="/" className="text-lg font-semibold tracking-tight text-white">
-        Juan Cruz
+        Juan Cruz Filippini
       </Link>
       <div className="flex flex-1 flex-wrap items-center justify-end gap-2 sm:gap-3">
         <nav className="flex flex-wrap items-center gap-2 text-sm font-medium text-slate-400 sm:gap-3">

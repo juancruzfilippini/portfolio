@@ -22,7 +22,7 @@ export default function HomePage() {
               <span className="rounded-full bg-white/10 px-3 py-1">{t.hero.role}</span>
               <span>{t.hero.badgeMeta}</span>
             </div>
-            <h1 className="text-3xl leading-tight sm:text-4xl">Juan Cruz</h1>
+            <h1 className="text-3xl leading-tight sm:text-4xl">Juan Cruz Filippini</h1>
             <p className="max-w-2xl text-lg text-slate-400 sm:text-xl">{t.hero.description}</p>
             <div className="flex flex-wrap gap-3">
               <ButtonLink href="/projects" variant="primary">

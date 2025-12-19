@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteTitle = "Juan Cruz | Tecnico Universitario en Programación";
+const siteTitle = "Juan Cruz Filippini | Tecnico Universitario en Programación";
 const siteDescription =
   "Construyo sistemas web y APIs enfocadas en negocio, con experiencia en Laravel, Node.js y operaciones Linux.";
 
