@@ -188,7 +188,7 @@ export const translations: Record<Language, Translations> = {
         "",
     },
     footer: {
-      rights: "",
+      rights: "Todos los derechos reservados.",
       projects: "Proyectos",
       about: "Sobre mí",
       contact: "Contacto",
@@ -303,7 +303,7 @@ export const translations: Record<Language, Translations> = {
         "",
     },
     footer: {
-      rights: "",
+      rights: "All rights reserved.",
       projects: "Projects",
       about: "About",
       contact: "Contact",
