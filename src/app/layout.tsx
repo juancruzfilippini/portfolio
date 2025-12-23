@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import EntryAnimation from "@/components/EntryAnimation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,11 +48,13 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
         <LanguageProvider>
-          <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 py-6 sm:py-8 sm:px-8">
-            <Navbar />
-            <main className="flex-1 pt-6 sm:pt-10">{children}</main>
-            <Footer />
-          </div>
+          <EntryAnimation>
+            <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 py-6 sm:py-8 sm:px-8">
+              <Navbar />
+              <main className="flex-1 pt-6 sm:pt-10">{children}</main>
+              <Footer />
+            </div>
+          </EntryAnimation>
         </LanguageProvider>
       </body>
     </html>
