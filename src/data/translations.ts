@@ -207,7 +207,7 @@ export const translations: Record<Language, Translations> = {
       contact: "Contact",
     },
     hero: {
-      role: "Tecnico Universitario en Programación",
+      role: "University Technician in Programming",
       description:
         "I build web systems and APIs focused on business rules, consistent data, and production-ready operations.",
       badgeMeta: "Laravel · Node.js · MySQL",
