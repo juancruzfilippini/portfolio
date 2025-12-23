@@ -185,7 +185,7 @@ export const translations: Record<Language, Translations> = {
       github: "GitHub",
       whatsapp: "WhatsApp",
       helper:
-        "Incluí contexto del proyecto, tecnologías usadas y urgencia. Si es un incidente de base de datos, agrega logs y métrica de conexiones para acelerar el diagnóstico.",
+        "",
     },
     footer: {
       rights: "",
@@ -300,7 +300,7 @@ export const translations: Record<Language, Translations> = {
       github: "GitHub",
       whatsapp: "WhatsApp",
       helper:
-        "Include project context, technologies, and urgency. For database incidents, add logs and connection metrics to speed up diagnostics.",
+        "",
     },
     footer: {
       rights: "",
