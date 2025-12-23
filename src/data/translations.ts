@@ -66,6 +66,10 @@ export type Translations = {
     directHeading: string;
     emailLabel: string;
     mailtoCta: string;
+    socialHeading: string;
+    linkedin: string;
+    github: string;
+    whatsapp: string;
     helper: string;
   };
   footer: {
