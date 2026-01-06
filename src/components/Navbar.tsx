@@ -43,7 +43,7 @@ export default function Navbar() {
           aria-label="Toggle language"
           aria-pressed={lang === "en"}
         >
-          {lang === "es" ? "EN" : "ES"}
+          {lang === "es" ? "🇪🇸 ES" : "🇬🇧 EN"}
         </button>
       </div>
     </header>
